@@ -10,7 +10,7 @@ import CategoryCard from '../components/CategoryCard';
 import NavItems from '../components/NavItems';
 import IconsSocialMedia from '../components/IconsSocialMedia';
 
-import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 
 export default function Home() {
@@ -143,7 +143,7 @@ export default function Home() {
           <ShapeBig positionX='-right-40' positionY='bottom-20' />
 
           <div className="home__container container mx-1 grid pt-14 xs:grid-cols-[.6rf] xs:content-center xs:mx-auto">
-            <Fade top distance={"60px"} duration={2500} delay={400}>
+            <Fade direction='down' duration={2500} delay={400}>
               <div className="home__data text-center font-bold">
                 <h1 className="home__title relative max-[340px]:text-2xl text-4xl leading-[140%] w-max mx-auto mt-0 mb-4 md:text-6xl">
                   <span className='block font-second text-first-50 font-normal'>Halloween</span> Trick Or Treat!!!
@@ -163,13 +163,13 @@ export default function Home() {
 
               </div>
             </Fade>
-            <Fade top distance={"60px"} duration={1000} delay={800}>
+            <Fade direction='down' duration={1000} delay={800}>
               <img src="/home-pumpkin.png" alt="home image" className="home__img w-[300px] justify-self-center mt-6 md:w-[500px] xl:w-[600px] xl:mt-12" />
             </Fade>
-            <Fade left distance={"60px"} duration={1000} delay={800}>
+            <Fade direction='left' duration={1000} delay={800}>
               <img src="/home-tree1.png" alt="home image" className="home__tree-1 w-[120px] absolute max-[340px]:-left-16 top-72 -left-8 xs:w-[200px] md:w-[300px] md:top-56 xl:w-[450px]" />
             </Fade>
-            <Fade right distance={"60px"} duration={1000} delay={800}>
+            <Fade direction="right" duration={1000} delay={800}>
               <img src="/home-tree2.png" alt="home image" className="home__tree-2 w-[120px] absolute max-[340px]:-right-16 top-72 -right-8 xs:w-[200px] md:w-[300px] md:top-56 xl:w-[450px]" />
             </Fade>
           </div>
@@ -186,21 +186,21 @@ export default function Home() {
           </h2>
 
           <div className="category__container container grid grid-cols-[228px] justify-center gap-y-24 xs:mx-auto sm:grid-cols-2 sm:w-[500px] sm:gap-x-16 lg:grid-cols-3 lg:w-[800px]">
-            <Fade top distance={"60px"} duration={2500} delay={400}>
+            <Fade direction='down' duration={2500} delay={400}>
               <CategoryCard
                 imgSrc='/category-pumpkin.png'
                 title='Pumpkins'
                 description='Light up horror pumpkins to scare at night'
               />
             </Fade>
-            <Fade top distance={"60px"} duration={2500} delay={600}>
+            <Fade direction='down' duration={2500} delay={600}>
               <CategoryCard
                 imgSrc='/category-ghost.png'
                 title='Ghost'
                 description='Spooky ghosts to scare in the most haunted houses'
               />
             </Fade>
-            <Fade top distance={"60px"} duration={2500} delay={800}>
+            <Fade direction='down' duration={2500} delay={800}>
               <CategoryCard
                 imgSrc='/category-witch-hat.png'
                 title='Witch Hat'
@@ -217,7 +217,7 @@ export default function Home() {
           <ShapeBig positionX='-left-32' positionY='bottom-0 lg:-bottom-48' />
 
           <div className="about__container container grid gap-y-14 xs:mx-auto xs:content-center lg:pt-8 lg:flex lg:items-center lg:justify-between lg:px-10 lg:w-[1024px]">
-            <Fade left distance={"60px"} duration={2500} delay={400}>
+            <Fade direction='left' duration={2500} delay={400}>
 
               <div className="about__data text-center lg:w-1/3 lg:text-start ">
                 <h2 className="section__title block font-second text-first-50 font-normal text-center text-2xl leading-[140%] w-max mx-auto pt-8 mb-4 md:text-3xl lg:text-start lg:mx-0 lg:mb-6">
@@ -252,7 +252,7 @@ export default function Home() {
           </h2>
 
           <div className="items__container container grid pt-8 px-6 max-[340px]:grid-cols-[180px] grid-cols-2 justify-center gap-y-16 gap-x-6 xs:mx-auto xs:grid-cols-[repeat(2,200px)] lg:grid-cols-3 lg:w-[800px] lg:gap-y-24 lg:gap-x-14">
-            <Fade top distance={"60px"} duration={2500} delay={400}>
+            <Fade direction='down' duration={2500} delay={400}>
               <ItemCard
                 imageSrc='/item-apple.png'
                 itemName='Candy Apple'
@@ -260,7 +260,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade top distance={"60px"} duration={2500} delay={500}>
+            <Fade direction='down' duration={2500} delay={500}>
               <ItemCard
                 imageSrc='/item-broom.png'
                 itemName='Witch Broom'
@@ -268,7 +268,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade top distance={"60px"} duration={2500} delay={600}>
+            <Fade direction='down' duration={2500} delay={600}>
               <ItemCard
                 imageSrc='/item-pumpkin.png'
                 itemName='Pumpkin'
@@ -276,7 +276,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade top distance={"60px"} duration={2500} delay={700}>
+            <Fade direction='down' duration={2500} delay={700}>
               <ItemCard
                 imageSrc='/item-spider.png'
                 itemName='Spider'
@@ -284,7 +284,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade top distance={"60px"} duration={2500} delay={800}>
+            <Fade direction='down' duration={2500} delay={800}>
               <ItemCard
                 imageSrc='/item-witch-hat.png'
                 itemName='Witch Hat'
@@ -299,7 +299,7 @@ export default function Home() {
         {/*==================== PARTY ====================*/}
         <section className="party section mx-1 mt-20 relative" id="party">
           <div className="party__container container grid gap-y-20 xs:mx-auto  lg:flex lg:items-center lg:justify-between lg:px-20 lg:w-[1024px] lg:gap-y-5 lg:pt-12 ">
-            <Fade right distance={"60px"} duration={2500} delay={400}>
+            <Fade direction='right' duration={2500} delay={400}>
               <div className="party__data px-4 text-center lg:w-[400px] lg:text-start">
                 <h2 className="section__title block font-second text-first-50 font-normal text-center text-2xl leading-[140%] w-max mx-auto pt-8 mb-4 md:text-3xl lg:text-start lg:mx-0 lg:mb-6">
                   Halloween <br />
@@ -334,7 +334,7 @@ export default function Home() {
         <ShapeBig positionX='-left-[8rem]' positionY='-bottom-[5rem] lg:-bottom-[16rem]' />
 
         <div className="footer__container container grid gap-y-16 px-4 lg:max-w-[1024px] lg:flex lg:mx-auto ">
-          <Fade top distance={"60px"} duration={2500} delay={400}>
+          <Fade direction='down' duration={2500} delay={400}>
             <div className='lg:w-2/5'>
               <a href="#" className="footer__logo inline-flex items-center gap-y-2 text-first-50 font-medium mb-5 transition duration-300 hover:text-first-100 lg:text-base">
                 <img src="/logo-skull.png" alt="logo image" className='w-5 mr-2' />
@@ -390,10 +390,10 @@ export default function Home() {
               </div>
             </div>
           </Fade>
-          <Fade right distance={"60px"} duration={2500} delay={400}>
+          <Fade direction='right' duration={2500} delay={400}>
             <img src="/footer-tree1.png" alt="footer image" className="footer__tree-1 w-[150px] absolute top-16 -right-6 lg:w-[250px] lg:top-auto lg:bottom-6 lg:-right-8" />
           </Fade>
-          <Fade left distance={"60px"} duration={2500} delay={400}>
+          <Fade direction='left' duration={2500} delay={400}>
             <img src="/footer-tree2.png" alt="footer image" className="footer__tree-2 w-[150px] absolute -left-6 -bottom-2 lg:w-[250px] lg:-bottom-6 xl:left-[10%]" />
           </Fade>
         </div>
