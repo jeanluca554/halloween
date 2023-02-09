@@ -143,7 +143,7 @@ export default function Home() {
           <ShapeBig positionX='-right-40' positionY='bottom-20' />
 
           <div className="home__container container mx-1 grid pt-14 xs:grid-cols-[.6rf] xs:content-center xs:mx-auto">
-            <Fade direction='down' duration={2500} delay={400}>
+            <Fade direction='down' duration={2500} delay={400} triggerOnce>
               <div className="home__data text-center font-bold">
                 <h1 className="home__title relative max-[340px]:text-2xl text-4xl leading-[140%] w-max mx-auto mt-0 mb-4 md:text-6xl">
                   <span className='block font-second text-first-50 font-normal'>Halloween</span> Trick Or Treat!!!
@@ -163,14 +163,14 @@ export default function Home() {
 
               </div>
             </Fade>
-            <Fade direction='down' duration={1000} delay={800}>
-              <img src="/home-pumpkin.png" alt="home image" className="home__img w-[300px] justify-self-center mt-6 md:w-[500px] xl:w-[600px] xl:mt-12" />
+            <Fade direction='down' duration={1000} delay={800} triggerOnce className="home__img justify-self-center w-[300px] mt-6 md:w-[500px] xl:w-[600px] xl:mt-12">
+              <img src="/home-pumpkin.png" alt="home image" />
             </Fade>
-            <Fade direction='left' duration={1000} delay={800}>
-              <img src="/home-tree1.png" alt="home image" className="home__tree-1 w-[120px] absolute max-[340px]:-left-16 top-72 -left-8 xs:w-[200px] md:w-[300px] md:top-56 xl:w-[450px]" />
+            <Fade direction='left' duration={1000} delay={800} triggerOnce className="absolute top-72 -left-8 w-[120px] max-[340px]:-left-16  xs:w-[200px] md:w-[300px] md:top-56 xl:w-[450px]">
+              <img src="/home-tree1.png" alt="home image" className="home__tree-1   " />
             </Fade>
-            <Fade direction="right" duration={1000} delay={800}>
-              <img src="/home-tree2.png" alt="home image" className="home__tree-2 w-[120px] absolute max-[340px]:-right-16 top-72 -right-8 xs:w-[200px] md:w-[300px] md:top-56 xl:w-[450px]" />
+            <Fade direction="right" duration={1000} delay={800} triggerOnce className="home__tree-2 w-[120px] absolute max-[340px]:-right-16 top-72 -right-8 xs:w-[200px] md:w-[300px] md:top-56 xl:w-[450px]">
+              <img src="/home-tree2.png" alt="home image" />
             </Fade>
           </div>
         </section>
@@ -186,21 +186,21 @@ export default function Home() {
           </h2>
 
           <div className="category__container container grid grid-cols-[228px] justify-center gap-y-24 xs:mx-auto sm:grid-cols-2 sm:w-[500px] sm:gap-x-16 lg:grid-cols-3 lg:w-[800px]">
-            <Fade direction='down' duration={2500} delay={400}>
+            <Fade direction='down' duration={2500} delay={400} triggerOnce>
               <CategoryCard
                 imgSrc='/category-pumpkin.png'
                 title='Pumpkins'
                 description='Light up horror pumpkins to scare at night'
               />
             </Fade>
-            <Fade direction='down' duration={2500} delay={600}>
+            <Fade direction='down' duration={2500} delay={600} triggerOnce>
               <CategoryCard
                 imgSrc='/category-ghost.png'
                 title='Ghost'
                 description='Spooky ghosts to scare in the most haunted houses'
               />
             </Fade>
-            <Fade direction='down' duration={2500} delay={800}>
+            <Fade direction='down' duration={2500} delay={800} triggerOnce>
               <CategoryCard
                 imgSrc='/category-witch-hat.png'
                 title='Witch Hat'
@@ -217,15 +217,15 @@ export default function Home() {
           <ShapeBig positionX='-left-32' positionY='bottom-0 lg:-bottom-48' />
 
           <div className="about__container container grid gap-y-14 xs:mx-auto xs:content-center lg:pt-8 lg:flex lg:items-center lg:justify-between lg:px-10 lg:w-[1024px]">
-            <Fade direction='left' duration={2500} delay={400}>
+            <Fade direction='left' duration={2500} delay={400} triggerOnce>
 
-              <div className="about__data text-center lg:w-1/3 lg:text-start ">
+              <div className="about__data text-center lg:text-start ">
                 <h2 className="section__title block font-second text-first-50 font-normal text-center text-2xl leading-[140%] w-max mx-auto pt-8 mb-4 md:text-3xl lg:text-start lg:mx-0 lg:mb-6">
                   About The Night <br />
                   Of Terror
                 </h2>
 
-                <p className="about__description mb-8 px-4 max-w-xl mx-auto lg:px-0 lg:mb-10">
+                <p className="about__description mb-8 px-4 max-w-xl mx-auto lg:pl-0 lg:pr-20 lg:mb-10 ">
                   Halloween is celebrated every October 31
                   at night, walk around the city with your
                   friends and trick or treat, enjoy this
@@ -237,7 +237,9 @@ export default function Home() {
                 />
 
               </div>
-              <img src="/about-scare.png" alt="about image" className="about__img w-[300px] justify-self-center lg:-order-1 lg:w-[500px]" />
+            </Fade>
+            <Fade direction='left' duration={2500} delay={400} triggerOnce className="about__img w-[300px] justify-self-center lg:w-[500px]">
+              <img src="/about-scare.png" alt="about image" />
             </Fade>
           </div>
         </section>
@@ -252,7 +254,7 @@ export default function Home() {
           </h2>
 
           <div className="items__container container grid pt-8 px-6 max-[340px]:grid-cols-[180px] grid-cols-2 justify-center gap-y-16 gap-x-6 xs:mx-auto xs:grid-cols-[repeat(2,200px)] lg:grid-cols-3 lg:w-[800px] lg:gap-y-24 lg:gap-x-14">
-            <Fade direction='down' duration={2500} delay={400}>
+            <Fade direction='down' duration={2500} delay={400} triggerOnce>
               <ItemCard
                 imageSrc='/item-apple.png'
                 itemName='Candy Apple'
@@ -260,7 +262,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade direction='down' duration={2500} delay={500}>
+            <Fade direction='down' duration={2500} delay={500} triggerOnce>
               <ItemCard
                 imageSrc='/item-broom.png'
                 itemName='Witch Broom'
@@ -268,7 +270,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade direction='down' duration={2500} delay={600}>
+            <Fade direction='down' duration={2500} delay={600} triggerOnce>
               <ItemCard
                 imageSrc='/item-pumpkin.png'
                 itemName='Pumpkin'
@@ -276,7 +278,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade direction='down' duration={2500} delay={700}>
+            <Fade direction='down' duration={2500} delay={700} triggerOnce>
               <ItemCard
                 imageSrc='/item-spider.png'
                 itemName='Spider'
@@ -284,7 +286,7 @@ export default function Home() {
               />
             </Fade>
 
-            <Fade direction='down' duration={2500} delay={800}>
+            <Fade direction='down' duration={2500} delay={800} triggerOnce>
               <ItemCard
                 imageSrc='/item-witch-hat.png'
                 itemName='Witch Hat'
@@ -298,8 +300,8 @@ export default function Home() {
 
         {/*==================== PARTY ====================*/}
         <section className="party section mx-1 mt-20 relative" id="party">
-          <div className="party__container container grid gap-y-20 xs:mx-auto  lg:flex lg:items-center lg:justify-between lg:px-20 lg:w-[1024px] lg:gap-y-5 lg:pt-12 ">
-            <Fade direction='right' duration={2500} delay={400}>
+          <Fade direction='right' duration={2500} delay={400} triggerOnce>
+            <div className="party__container container grid gap-y-20 xs:mx-auto  lg:flex lg:items-center lg:justify-between lg:px-20 lg:w-[1024px] lg:gap-y-5 lg:pt-12 ">
               <div className="party__data px-4 text-center lg:w-[400px] lg:text-start">
                 <h2 className="section__title block font-second text-first-50 font-normal text-center text-2xl leading-[140%] w-max mx-auto pt-8 mb-4 md:text-3xl lg:text-start lg:mx-0 lg:mb-6">
                   Halloween <br />
@@ -322,21 +324,21 @@ export default function Home() {
                 <img src="/stars.png" alt="party image" className="party__star-1 w-[50px] absolute rotate-[15deg] -top-12 -left-2 animate-[wiggle_5s_ease-in-out_infinite] lg:w-[100px] lg:-top-20 lg:-left-20" />
                 <img src="/stars.png" alt="party image" className="party__star-2 w-[50px] absolute rotate-[15deg] -right-6 bottom-8 animate-[wiggle2_5s_ease-in-out_infinite] lg:w-[100px] lg:bottom-12 lg:-right-12" />
               </div>
-            </Fade>
-          </div>
+            </div>
+          </Fade>
 
         </section>
       </main>
 
       {/*==================== FOOTER ====================*/}
-      <footer className="footer section mx-1 relative pt-20 overflow-hidden">
+      <footer className="footer section mx-1 relative pt-20 overflow-hidden ">
         <ShapeSmall positionX='-right-[7rem]' positionY='top-[15rem]' />
         <ShapeBig positionX='-left-[8rem]' positionY='-bottom-[5rem] lg:-bottom-[16rem]' />
 
-        <div className="footer__container container grid gap-y-16 px-4 lg:max-w-[1024px] lg:flex lg:mx-auto ">
-          <Fade direction='down' duration={2500} delay={400}>
-            <div className='lg:w-2/5'>
-              <a href="#" className="footer__logo inline-flex items-center gap-y-2 text-first-50 font-medium mb-5 transition duration-300 hover:text-first-100 lg:text-base">
+        <div className="footer__container container grid gap-y-16 px-4 lg:max-w-[1024px] lg:flex mx-auto lg:gap-40">
+          <Fade direction='down' duration={2500} delay={400} triggerOnce>
+            <div >
+              <a href="#" className="footer__logo inline-flex items-center gap-y-2 text-first-50 font-medium mb-5 transition duration-300 hover:text-first-100 lg:text-base mx-auto">
                 <img src="/logo-skull.png" alt="logo image" className='w-5 mr-2' />
                 Halloween
               </a>
@@ -346,7 +348,9 @@ export default function Home() {
                 night of your life.
               </p>
             </div>
+          </Fade>
 
+          <Fade direction='down' duration={2500} delay={400} triggerOnce>
             <div className="footer__content grid grid-cols-2 max-[340px]:gap-6 gap-y-10 gap-x-6 xs:grid-cols-3 md:grid-cols-4 md:gap-0 md:max-w-3xl lg:gap-20 ">
               <FooterContent
                 title='About Us'
@@ -390,11 +394,11 @@ export default function Home() {
               </div>
             </div>
           </Fade>
-          <Fade direction='right' duration={2500} delay={400}>
-            <img src="/footer-tree1.png" alt="footer image" className="footer__tree-1 w-[150px] absolute top-16 -right-6 lg:w-[250px] lg:top-auto lg:bottom-6 lg:-right-8" />
+          <Fade direction='right' duration={2500} delay={400} triggerOnce className="footer__tree-1 w-[150px] absolute top-16 -right-6 lg:w-[250px] lg:top-auto lg:bottom-6 lg:-right-8">
+            <img src="/footer-tree1.png" alt="footer image" />
           </Fade>
-          <Fade direction='left' duration={2500} delay={400}>
-            <img src="/footer-tree2.png" alt="footer image" className="footer__tree-2 w-[150px] absolute -left-6 -bottom-2 lg:w-[250px] lg:-bottom-6 xl:left-[10%]" />
+          <Fade direction='left' duration={2500} delay={400} triggerOnce className="footer__tree-2 w-[150px] absolute -left-6 -bottom-2 lg:w-[250px] lg:-bottom-6 xl:left-[10%]">
+            <img src="/footer-tree2.png" alt="footer image" />
           </Fade>
         </div>
 
